@@ -1,0 +1,219 @@
+<main class="main-content">
+  <div class="container-fluid">
+    <div class="d-flex my-2">
+      <div class="">
+        <h3 class="page-title pt-2">Dashboard</h3>
+      </div>
+      <div class="p-2 ml-auto">
+        <ul class="block-tools g-3">
+          <li>
+            <a href="reports" class="btn btn-primary"
+              ><em class="icon ni ni-download-cloud"></em
+              ><span>Reports</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- dashboard-metrics -->
+    <div class="dashboard-metrics mb-4">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-2 p-2">
+            <div class="card p-3 bg-info">
+              <blockquote class="card-blockquote">
+                <h2>{{ customerCount }}</h2>
+                <div>Active Customers</div>
+              </blockquote>
+            </div>
+          </div>
+          <div class="col-md-2 p-2">
+            <div class="card p-3 bg-success text-white">
+              <blockquote class="card-blockquote">
+                <h2>70</h2>
+                <div>Total Loans</div>
+              </blockquote>
+            </div>
+          </div>
+          <div class="col-md-2 p-2">
+            <div class="card p-3 bg-info">
+              <blockquote class="card-blockquote">
+                <h2>65</h2>
+                <div>Approved Loans</div>
+              </blockquote>
+            </div>
+          </div>
+          <div class="col-md-2 p-2">
+            <div class="card p-3 bg-warning">
+              <blockquote class="card-blockquote">
+                <h2>25</h2>
+                <div>Pending Loans</div>
+              </blockquote>
+            </div>
+          </div>
+          <div class="col-md-2 p-2">
+            <div class="card p-3 bg-danger text-white">
+              <blockquote class="card-blockquote">
+                <h2>15</h2>
+                <div>Risk Loans</div>
+              </blockquote>
+            </div>
+          </div>
+          <div class="col-md-2 p-2">
+            <div class="card p-3 bg-warning">
+              <blockquote class="card-blockquote">
+                <h2>65</h2>
+                <div>Total Receivables</div>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ./dashboard-metrics -->
+    <h5 class="mb-3">Recent Loans</h5>
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="card-inner pt-1">
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <!--Table head-->
+              <thead class="mdb-color">
+                <tr class="text-black">
+                  <th>Loan ID</th>
+                  <th>Customer Name</th>
+                  <th>Loan Type</th>
+                  <th>Last Payment</th>
+                  <th>Payment Due</th>
+                  <th>Loan Status</th>
+                </tr>
+              </thead>
+              <!--Table head-->
+              <!--Table body-->
+              <tbody>
+                <tr>
+                  <td><a href="#">LN-1454</a></td>
+                  <td>Robert</td>
+                  <td>EL</td>
+                  <td>12-DEC-2021</td>
+                  <td>12-JAN-2022</td>
+                  <td>
+                    <div class="text-info">Active</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="#">LN-1454</a></td>
+                  <td>Thornton</td>
+                  <td>CL</td>
+                  <td>10-NOV-2021</td>
+                  <td>10-JAN-2022</td>
+                  <td>
+                    <div class="text-success">Active</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="#">LN-1454</a></td>
+                  <td>Patricia</td>
+                  <td>HL</td>
+                  <td>24-OCT-2021</td>
+                  <td>24-DEC-2022</td>
+                  <td class="text-success">
+                    <div class="text-warning">Risk</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="#">LN-1454</a></td>
+                  <td>John David</td>
+                  <td>HL</td>
+                  <td>02-SEP-2021</td>
+                  <td>02-JAN-2022</td>
+                  <td>
+                    <div class="text-danger">Inactive</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="#">LN-1454</a></td>
+                  <td>Oliver Stone</td>
+                  <td>PL</td>
+                  <td>06-DEC-2021</td>
+                  <td>06-JAN-2022</td>
+                  <td>
+                    <div class="text-success">Active</div>
+                  </td>
+                </tr>
+              </tbody>
+              <!--Table body-->
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ./card -->
+    <h5 class="mb-3">Recent Customers</h5>
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="card-inner pt-1">
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <!--Table head-->
+              <thead class="mdb-color">
+                <tr class="text-black">
+                  <th>Customer Id</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Phone Number</th>
+                  <th>Email Address</th>
+                  <th>Address</th>
+                  <th>Department</th>
+                </tr>
+              </thead>
+              <!--Table head-->
+              <!--Table body-->
+              <tbody>
+                <tr
+                  *ngFor="
+                    let customer of customerList.slice(customerList.length - 5)
+                  "
+                >
+                  <!-- <td scope="row">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault"
+                      />
+                    </div>
+                  </td> -->
+                  <td>
+                    <a [routerLink]="['/customers/view', customer._id]">{{
+                      customer._id
+                    }}</a>
+                  </td>
+                  <td>{{ customer.firstName }}</td>
+                  <td>{{ customer.lastName }}</td>
+                  <td>{{ customer.phoneNumber }}</td>
+                  <td>{{ customer.dob }}</td>
+                  <td>{{ customer.emailAddress }}</td>
+                  <td>{{ customer.department }}</td>
+                </tr>
+              </tbody>
+              <!--Table body-->
+            </table>
+          </div>
+          <!--Table body-->
+        </div>
+      </div>
+    </div>
+    <!-- ./card -->
+    <h5 class="mb-3">Reports</h5>
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="card-inner pt-1">
+          <app-area></app-area>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ./container-fluid -->
+</main>

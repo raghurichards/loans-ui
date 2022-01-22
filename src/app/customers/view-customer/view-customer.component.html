@@ -1,0 +1,39 @@
+<h2 class="m-4">Customer Details</h2>
+<div class="card p-4 m-4">
+  <table>
+    <tr>
+      <td class="p-2">Customer ID</td>
+      <td>{{ customerId }}</td>
+    </tr>
+    <tr>
+      <td class="p-2">First Name</td>
+      <td>{{ firstName }}</td>
+    </tr>
+    <tr>
+      <td class="p-2">Last Name</td>
+      <td>{{ lastName }}</td>
+    </tr>
+    <tr>
+      <td class="p-2">Phone</td>
+      <td>{{ phoneNumber }}</td>
+    </tr>
+    <tr>
+      <td class="p-2">Email</td>
+      <td>{{ emailAddress }}</td>
+    </tr>
+  </table>
+</div>
+<div class="p-2 m3r-auto">
+  <ul class="block-tools g-3">
+    <li>
+      <a [routerLink]="['/customers/edit', customerId]" class="btn btn-primary"
+        ><em class="icon ni ni-download-cloud"></em
+        ><span>Edit Customer</span></a
+      >
+
+      <button type="submit" (click)="onDelete()" class="btn btn-danger">
+        Delete Customer
+      </button>
+    </li>
+  </ul>
+</div>
