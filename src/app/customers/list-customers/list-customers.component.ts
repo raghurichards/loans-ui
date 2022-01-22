@@ -22,6 +22,7 @@ export class ListCustomersComponent implements OnInit {
     this.customerService.getCustomers().subscribe((data: any) => {
       this.customerResult = data;
       this.customerList = this.customerResult.results;
+      //console.log(data);
     });
   }
 }

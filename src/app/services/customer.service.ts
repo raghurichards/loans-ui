@@ -14,6 +14,8 @@ export class CustomerService {
   getCustomers() {
     let url =
       environment.CUSTOMER_BASE_URL + environment.CUSTOMER.GET_ALL_CUSTOMERS;
+    //console.log(url);
+
     return this.httpClient.get(url);
   }
 
@@ -36,8 +38,8 @@ export class CustomerService {
   }
 
   deleteCustomer(id: any) {
-    let url = 
-    environment.CUSTOMER_BASE_URL +
+    let url =
+      environment.CUSTOMER_BASE_URL +
       environment.CUSTOMER.DELETE_CUSTOMER +
       '?userID=' +
       id;

@@ -20,6 +20,7 @@ export class DashboardComponent implements OnInit {
 
   getCustomerList() {
     this.customerService.getCustomers().subscribe((data: any) => {
+      //console.log(data);
       this.customerResult = data;
       this.customerList = this.customerResult.results;
       this.customerCount = this.customerResult.recordCount;

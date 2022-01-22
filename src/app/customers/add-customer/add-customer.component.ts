@@ -49,7 +49,7 @@ export class AddCustomerComponent implements OnInit {
 
     this.customerservice.createAccount(customerInfo).subscribe(() => {
       this.datasaved = true;
-      this.message = 'User Created';
+      this.message = 'Customer Created';
       this.regForm.reset();
       console.log(customerInfo);
     });
