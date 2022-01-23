@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Customer } from 'src/app/models/customer.model';
 import { CustomerService } from '../services/customer.service';
+import { AreaComponent } from '../reports/area/area.component';
 
 @Component({
   selector: 'app-dashboard',
